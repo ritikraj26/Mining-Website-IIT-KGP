@@ -7,4 +7,8 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Mining_Website';
+  loadedTab = 'history';
+  onNavigate(tab: string) {
+    this.loadedTab=tab;
+  }
 }

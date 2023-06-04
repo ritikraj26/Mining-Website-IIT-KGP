@@ -4,12 +4,11 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
-import { HomeComponent } from './components/tabs/home/home.component';
-import { ResearchComponent } from './components/tabs/research/research.component';
-import { ProgrammeComponent } from './components/tabs/programme/programme.component';
-import { PeopleComponent } from './components/tabs/people/people.component';
-import { FormerFacultyComponent } from './components/tabs/former-faculty/former-faculty.component';
-import { IitKgpComponent } from './components/tabs/iit-kgp/iit-kgp.component';
+import { HomeComponent } from './components/header/home/home.component';
+import { ResearchComponent } from './components/header/research/research.component';
+import { ProgrammeComponent } from './components/header/programme/programme.component';
+import { PeopleComponent } from './components/header/people/people.component';
+import { FormerFacultyComponent } from './components/header/former-faculty/former-faculty.component';
 import { HistoryComponent } from './components/nav/history/history.component';
 import { HeadComponent } from './components/nav/head/head.component';
 import { AwardsAndRecognitionComponent } from './components/nav/awards-and-recognition/awards-and-recognition.component';
@@ -29,7 +28,6 @@ import { VisitorsHelpComponent } from './components/nav/visitors-help/visitors-h
     ProgrammeComponent,
     PeopleComponent,
     FormerFacultyComponent,
-    IitKgpComponent,
     HistoryComponent,
     HeadComponent,
     AwardsAndRecognitionComponent,

@@ -1,36 +1,17 @@
-<app-header>
-    
-</app-header>
-
+<app-header (tabSelected)="onNavigate($event)"></app-header>
 <div class="container">
     <div class="row">
-        <div class="col-sm">
-            <app-history></app-history>
-        </div>
-        <div class="col-sm">
-            <app-head></app-head>
-        </div>
-        <div class="col-sm">
-            <app-people></app-people>
-        </div>
-        <div class="col-sm">
-            <app-awards-and-recognition></app-awards-and-recognition>
-        </div>
-        <div class="col-sm">
-            <app-staff></app-staff>
-        </div>
-        <div class="col-sm">
-            <app-academic-programme></app-academic-programme>
-        </div>
-        <div class="col-sm">
-            <app-publication></app-publication>
-        </div>
-        <div class="col-sm">
-            <app-contact></app-contact>
-        </div>
-        <div class="col-sm">
-            <app-visitors-help></app-visitors-help>
+        <div class="col-md-12">
+            <app-history *ngIf="loadedTab==='history'"></app-history>
+            <app-head *ngIf="loadedTab==='head'"></app-head>
+            <app-people *ngIf="loadedTab==='people'"></app-people>
+            <app-awards-and-recognition *ngIf="loadedTab==='awards-and-recognition'"></app-awards-and-recognition>
+            <app-staff *ngIf="loadedTab==='staff'"></app-staff>
+            <app-academic-programme *ngIf="loadedTab==='academic-programme'"></app-academic-programme>
+            <app-publication *ngIf="loadedTab==='publication'"></app-publication>
+            <app-contact *ngIf="loadedTab==='contact'"></app-contact>
         </div>
     </div>
 </div>
+
 <app-footer></app-footer>
