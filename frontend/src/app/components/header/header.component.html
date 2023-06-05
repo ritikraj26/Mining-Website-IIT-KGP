@@ -7,11 +7,12 @@
     </a>
 
     <ul class="nav nav-pills">
-      <li class="nav-item"><a href="#" class="nav-link active" aria-current="page">Home</a></li>
-      <li class="nav-item"><a href="#" class="nav-link">People</a></li>
-      <li class="nav-item"><a href="#" class="nav-link">Programme</a></li>
-      <li class="nav-item"><a href="#" class="nav-link">Research</a></li>
-      <li class="nav-item"><a href="#" class="nav-link">About</a></li>
+      <li class="nav-item"><a href="#" class="nav-link active" aria-current="page" (click)="onSelect('home')">Home</a></li>
+      <li class="nav-item"><a href="#" class="nav-link" (click)="onSelect('research')">Research</a></li>
+      <li class="nav-item"><a href="#" class="nav-link" (click)="onSelect('programme')">Programme</a></li>
+      <li class="nav-item"><a href="#" class="nav-link" (click)="onSelect('people')">People</a></li>
+      <li class="nav-item"><a href="#" class="nav-link" (click)="onSelect('former-faculty')">Former Faculty</a></li>
+      <li class="nav-item"><a href="http://www.iitkgp.ac.in/" class="nav-link">IIT KGP</a></li>
     </ul>
   </header>
 </div>

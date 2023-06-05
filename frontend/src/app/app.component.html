@@ -2,6 +2,12 @@
 <div class="container">
     <div class="row">
         <div class="col-md-12">
+            <!-- headers -->
+            <app-home *ngIf="loadedTab==='home'"></app-home>
+            <app-research *ngIf="loadedTab==='research'"></app-research>
+            <app-programme *ngIf="loadedTab==='programme'"></app-programme>
+            <app-former-faculty *ngIf="loadedTab==='former-faculty'"></app-former-faculty>
+            <!-- navs -->
             <app-history *ngIf="loadedTab==='history'"></app-history>
             <app-head *ngIf="loadedTab==='head'"></app-head>
             <app-people *ngIf="loadedTab==='people'"></app-people>
