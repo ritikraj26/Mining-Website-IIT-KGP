@@ -1,6 +1,4 @@
 from django.db import models
-import datetime
-
 
 class research_topics(models.Model):
     topic=models.CharField(max_length=100)
