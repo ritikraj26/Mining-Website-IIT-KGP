@@ -13,7 +13,7 @@ class faculty_members(models.Model):
     image=models.ImageField(upload_to='media/images/faculty')
 
 
-class awards_and_recognition(models.Model):
+class awards_and_recognitions(models.Model):
     faculty=models.ForeignKey(faculty_members,on_delete=models.CASCADE)
     description=models.CharField(max_length=500)
     
@@ -28,9 +28,9 @@ class staff_members(models.Model):
     first_name=models.CharField(max_length=50)
     last_name=models.CharField(max_length=50)
     post=models.CharField(max_length=100)
-    email=models.EmailField(max_length=50)
+    email_id=models.EmailField(max_length=50)
 
-class timetable(models.Model):
+class timetables(models.Model):
     semester=models.CharField(max_length=10) #Autumn or Spring
     year=models.CharField(max_length=4)
     summary=models.FileField(upload_to='media/files/timetable')
