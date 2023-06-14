@@ -18,6 +18,8 @@ import { PublicationComponent } from './components/nav/publication/publication.c
 import { ContactComponent } from './components/nav/contact/contact.component';
 import { VisitorsHelpComponent } from './components/nav/visitors-help/visitors-help.component';
 
+import { HttpClientModule } from '@angular/common/http';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -38,7 +40,8 @@ import { VisitorsHelpComponent } from './components/nav/visitors-help/visitors-h
     VisitorsHelpComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
