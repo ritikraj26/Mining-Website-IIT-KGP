@@ -6,6 +6,7 @@ import { HttpClient } from '@angular/common/http';
   templateUrl: './people.component.html',
   styleUrls: ['./people.component.css']
 })
+
 export class PeopleComponent {
   constructor(private http:HttpClient) {}
 
