@@ -1,24 +1,9 @@
-<app-header (tabSelected)="onNavigate($event)"></app-header>
+<app-header></app-header>
 <div class="container">
     <div class="row">
         <div class="col-md-12">
-            <!-- headers -->
-            <app-home *ngIf="loadedTab==='home'"></app-home>
-            <app-research *ngIf="loadedTab==='research'"></app-research>
-            <app-programme *ngIf="loadedTab==='programme'"></app-programme>
-            <app-former-faculty *ngIf="loadedTab==='former-faculty'"></app-former-faculty>
-            <!-- navs -->
-            <app-history *ngIf="loadedTab==='history'"></app-history>
-            <app-head *ngIf="loadedTab==='head'"></app-head>
-            <app-people *ngIf="loadedTab==='people'"></app-people>
-            <app-awards-and-recognition *ngIf="loadedTab==='awards-and-recognition'"></app-awards-and-recognition>
-            <app-staff *ngIf="loadedTab==='staff'"></app-staff>
-            <app-academic-programme *ngIf="loadedTab==='academic-programme'"></app-academic-programme>
-            <app-publication *ngIf="loadedTab==='publication'"></app-publication>
-            <app-contact *ngIf="loadedTab==='contact'"></app-contact>
-            <app-visitors-help *ngIf="loadedTab==='visitors-help'"></app-visitors-help>
+            <router-outlet></router-outlet>
         </div>
     </div>
 </div>
-
 <app-footer></app-footer>

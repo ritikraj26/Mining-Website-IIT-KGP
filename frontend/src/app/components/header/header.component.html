@@ -2,29 +2,33 @@
 <div class="container">
   <header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom">
     <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-dark text-decoration-none">
-      <svg class="bi me-2" width="40" height="32"><use xlink:href="#bootstrap"></use></svg>
-      <span class="fs-4"><h3>Department of Mining Engineering, IIT Kharagpur</h3></span>
+      <svg class="bi me-2" width="40" height="32">
+        <use xlink:href="#bootstrap"></use>
+      </svg>
+      <span class="fs-4">
+        <h3>Department of Mining Engineering, IIT Kharagpur</h3>
+      </span>
     </a>
     <ul class="nav nav-pills">
-      <li class="nav-item" class="hvr"><a href="#" class="nav-link" aria-current="page" (click)="onSelect('home')">Home</a></li>
-      <li class="nav-item" class="hvr"><a href="#" class="nav-link" (click)="onSelect('research')">Research</a></li>
-      <li class="nav-item" class="hvr"><a href="#" class="nav-link" (click)="onSelect('programme')">Programme</a></li>
-      <li class="nav-item" class="hvr"><a href="#" class="nav-link" (click)="onSelect('people')">People</a></li>
-      <li class="nav-item" class="hvr"><a href="#" class="nav-link" (click)="onSelect('former-faculty')">Former Faculty</a></li>
+      <li class="nav-item" class="hvr"><a href="#" class="nav-link" aria-current="page" routerLink="/home">Home</a></li>
+      <li class="nav-item" class="hvr"><a href="#" class="nav-link" routerLink="/research">Research</a></li>
+      <li class="nav-item" class="hvr"><a href="#" class="nav-link" routerLink="/programme">Programme</a></li>
+      <li class="nav-item" class="hvr"><a href="#" class="nav-link" routerLink="/people">People</a></li>
+      <li class="nav-item" class="hvr"><a href="#" class="nav-link" routerLink="/former-faculty">Former Faculty</a></li>
       <li class="nav-item" class="hvr"><a href="http://www.iitkgp.ac.in/" class="nav-link">IIT KGP</a></li>
     </ul>
   </header>
 </div>
 <div class="container">
   <nav class="navbar navbar-light bg-light">
-    <a class="navbar-brand" href="#" (click)="onSelect('history')">History</a>
-    <a class="navbar-brand" href="#" (click)="onSelect('head')">Head</a>
-    <a class="navbar-brand" href="#" (click)="onSelect('people')">People</a>
-    <a class="navbar-brand" href="#" (click)="onSelect('awards-and-recognition')">Awards and Recognition</a>
-    <a class="navbar-brand" href="#" (click)="onSelect('staff')">Staff</a>
-    <a class="navbar-brand" href="#" (click)="onSelect('academic-programme')">Academic Programme</a>
-    <a class="navbar-brand" href="#" (click)="onSelect('publication')">Publication</a>
-    <a class="navbar-brand" href="#" (click)="onSelect('contact')">Contact</a>
-    <a class="navbar-brand" href="#" (click)="onSelect('visitors-help')">Visitor's help</a>
+  <a class="navbar-brand" routerLink="/history">History</a>
+    <a class="navbar-brand" routerLink="/head">Head</a>
+    <a class="navbar-brand" routerLink="/people">People</a>
+    <a class="navbar-brand" routerLink="/awards-and-recognition">Awards and Recognition</a>
+    <a class="navbar-brand" routerLink="/staff">Staff</a>
+    <a class="navbar-brand" routerLink="/academic-programme">Academic Programme</a>
+    <a class="navbar-brand" routerLink="/publication">Publication</a>
+    <a class="navbar-brand" routerLink="/contact">Contact</a>
+    <a class="navbar-brand" routerLink="/visitors-help">Visitor's help</a>
   </nav>
 </div>

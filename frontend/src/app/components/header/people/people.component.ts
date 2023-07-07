@@ -11,6 +11,7 @@ export class PeopleComponent {
   constructor(private http:HttpClient) {}
 
   obj:any;
+  faculty:any;
 
   ngOnInit() {
     this.obj = this.http.get("http://127.0.0.1:8000/home/faculty_members/").subscribe(
