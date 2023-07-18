@@ -5,38 +5,50 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { HomeComponent } from './components/header/home/home.component';
-import { ResearchComponent } from './components/header/research/research.component';
-import { ProgrammeComponent } from './components/header/programme/programme.component';
 import { PeopleComponent } from './components/header/people/people.component';
-import { FormerFacultyComponent } from './components/header/former-faculty/former-faculty.component';
-import { HistoryComponent } from './components/nav/history/history.component';
-import { HeadComponent } from './components/nav/head/head.component';
-import { AwardsAndRecognitionComponent } from './components/nav/awards-and-recognition/awards-and-recognition.component';
-import { StaffComponent } from './components/nav/staff/staff.component';
-import { AcademicProgrammeComponent } from './components/nav/academic-programme/academic-programme.component';
-import { PublicationComponent } from './components/nav/publication/publication.component';
-import { ContactComponent } from './components/nav/contact/contact.component';
-import { VisitorsHelpComponent } from './components/nav/visitors-help/visitors-help.component';
 
 import { MatTabsModule } from '@angular/material/tabs';
 import { HttpClientModule } from '@angular/common/http';
 import { RouterModule, Routes } from '@angular/router';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
+import { StudentsComponent } from './components/header/students/students.component';
+import { EventsComponent } from './components/header/events/events.component';
+import { GalleryComponent } from './components/header/gallery/gallery.component';
+import { EducationComponent } from './components/header/education/education.component';
+import { SocitiesComponent } from './components/header/socities/socities.component';
+import { ContactComponent } from './components/header/contact/contact.component';
+import { LabsComponent } from './components/header/labs/labs.component';
+import { AboutComponent } from './components/header/about/about.component';
+import { ResearchComponent } from './components/header/research/research.component';
+import { MdbAccordionModule } from 'mdb-angular-ui-kit/accordion';
+import { MdbCarouselModule } from 'mdb-angular-ui-kit/carousel';
+import { MdbCheckboxModule } from 'mdb-angular-ui-kit/checkbox';
+import { MdbCollapseModule } from 'mdb-angular-ui-kit/collapse';
+import { MdbDropdownModule } from 'mdb-angular-ui-kit/dropdown';
+import { MdbFormsModule } from 'mdb-angular-ui-kit/forms';
+import { MdbModalModule } from 'mdb-angular-ui-kit/modal';
+import { MdbPopoverModule } from 'mdb-angular-ui-kit/popover';
+import { MdbRadioModule } from 'mdb-angular-ui-kit/radio';
+import { MdbRangeModule } from 'mdb-angular-ui-kit/range';
+import { MdbRippleModule } from 'mdb-angular-ui-kit/ripple';
+import { MdbScrollspyModule } from 'mdb-angular-ui-kit/scrollspy';
+import { MdbTabsModule } from 'mdb-angular-ui-kit/tabs';
+import { MdbTooltipModule } from 'mdb-angular-ui-kit/tooltip';
+import { MdbValidationModule } from 'mdb-angular-ui-kit/validation';
+
 const routes: Routes = [
-  {path:'home', component:HomeComponent},
-  {path:'research', component:ResearchComponent},
-  {path:'programme', component:ProgrammeComponent},
-  {path:'former-faculty', component:FormerFacultyComponent},
-  {path:'history', component:HistoryComponent},
-  {path:'head', component:HeadComponent},
+  {path:'', component:HomeComponent},
   {path:'people', component:PeopleComponent},
-  {path:'awards-and-recognition', component:AwardsAndRecognitionComponent},
-  {path:'staff', component:StaffComponent},
-  {path:'academic-programme', component:AcademicProgrammeComponent},
-  {path:'publication', component:PublicationComponent},
+  {path:'about', component:AboutComponent},
+  {path:'education', component:EducationComponent},
+  {path:'events', component:EventsComponent},
+  {path:'gallery', component:GalleryComponent},
+  {path:'labs', component:LabsComponent},
+  {path:'socities', component:SocitiesComponent},
+  {path:'students', component:StudentsComponent},
+  {path:'research', component:ResearchComponent},
   {path:'contact', component:ContactComponent},
-  {path:'visitors-help', component:VisitorsHelpComponent},
 ]
 
 
@@ -46,25 +58,38 @@ const routes: Routes = [
     HeaderComponent,
     FooterComponent,
     HomeComponent,
-    ResearchComponent,
-    ProgrammeComponent,
     PeopleComponent,
-    FormerFacultyComponent,
-    HistoryComponent,
-    HeadComponent,
-    AwardsAndRecognitionComponent,
-    StaffComponent,
-    AcademicProgrammeComponent,
-    PublicationComponent,
+    StudentsComponent,
+    EventsComponent,
+    GalleryComponent,
+    EducationComponent,
+    SocitiesComponent,
     ContactComponent,
-    VisitorsHelpComponent
+    LabsComponent,
+    AboutComponent,
+    ResearchComponent,
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
     BrowserAnimationsModule,
     RouterModule.forRoot(routes),
-    MatTabsModule
+    MatTabsModule,
+    MdbAccordionModule,
+    MdbCarouselModule,
+    MdbCheckboxModule,
+    MdbCollapseModule,
+    MdbDropdownModule,
+    MdbFormsModule,
+    MdbModalModule,
+    MdbPopoverModule,
+    MdbRadioModule,
+    MdbRangeModule,
+    MdbRippleModule,
+    MdbScrollspyModule,
+    MdbTabsModule,
+    MdbTooltipModule,
+    MdbValidationModule
   ],
   providers: [],
   bootstrap: [AppComponent]

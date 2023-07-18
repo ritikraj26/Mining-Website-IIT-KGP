@@ -10,12 +10,15 @@ import { HttpClient } from '@angular/common/http';
 export class PeopleComponent {
   constructor(private http:HttpClient) {}
 
-  obj:any;
   faculty:any;
+  staff:any;
 
   ngOnInit() {
-    this.obj = this.http.get("http://127.0.0.1:8000/home/faculty_members/").subscribe(
-      data => this.obj = data
+    this.faculty = this.http.get("http://127.0.0.1:8000/home/faculty_members/").subscribe(
+      data => this.faculty = data
+    )
+    this.staff = this.http.get("http://127.0.0.1:8000/home/staff_members/").subscribe(
+      data => this.staff = data
     )
   }
 }

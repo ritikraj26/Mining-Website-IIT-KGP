@@ -1,20 +1,36 @@
-<div class="h1 text-center text-dark" id="pageHeaderTitle">Faculty Members</div>
-<div class="row">
-    <div class="col">
-        <div class="a-box" *ngFor="let faculty of obj">
-            <div class="img-container">
-            <div class="img-inner">
-                <div class="inner-skew">
-                <img src="https://images.unsplash.com/photo-1584791097929-aa825fe8e1e1?ixlib=rb-1.2.1&q=85&fm=jpg&crop=entropy&cs=srgb&ixid=eyJhcHBfaWQiOjE0NTg5fQ">
+
+    <div style="">
+        <div style="display: flex; flex-direction: column; padding: 20px; margin: 20px">
+            <h2>Faculty</h2>
+            <div style="display: flex; flex-direction: row; flex-wrap: wrap;">
+                <div *ngFor="let person of faculty"style="border: solid 1px; width: 20%; display: flex; flex-direction: column; border-radius: 50px; margin: 20px 20px;">
+                    <div style="background-color: #db5903; text-align: center; border-radius: 50px 50px  0 0;">
+                        <img style="border-radius: 50%; height: 100px; width: 100px; margin: 50px auto -50px auto; border: solid 3px white;" src="../../../../assets/doraemeon.png" alt="">
+                    </div>
+                    <div style="text-align: center; padding: 15% 0; display: flex; flex-direction: column;">
+                        <p><b>{{person.name}}</b></p>
+                        <p>PhD From : {{person.phd_college}}</p>
+                        <p>Area of Research: {{person.research_area}}</p>
+                        <p>Email: {{person.email_id}}</p>
+                        <a href="#" style="text-decoration: none;">Institute Webpage</a>
+                        <a href="{{person.personal_website}}" style="text-decoration: none;">Personal Website</a>
+                    </div>
                 </div>
             </div>
-            </div>
-            <div class="text-container">
-                <h3>{{faculty.first_name+" "+faculty.last_name}}</h3>
-                    <div>
-                        This a demo experiment to skew image container. It looks good.
+        </div>
+        <div style="display: flex; flex-direction: column; padding: 20px; margin: 20px;">
+            <h3>Staff</h3>
+            <div style="display: flex; flex-direction: row; flex-wrap: wrap;">
+                <div *ngFor="let person of staff"style="border: solid 1px; width: 20%; display: flex; flex-direction: column; border-radius: 50px; margin: 20px 20px;">
+                    <div style="background-color: #db5903; text-align: center; border-radius: 50px 50px  0 0;">
+                        <img style="border-radius: 50%; height: 100px; width: 100px; margin: 50px auto -50px auto; border: solid 3px white;" src="../../../../assets/doraemeon.png" alt="">
                     </div>
+                    <div style="text-align: center; padding: 15% 0; display: flex; flex-direction: column;">
+                        <p><b>{{person.name}}</b></p>
+                        <p>Laboratory: {{person.lab}}</p>
+                        <p>Email: {{person.email_id}}</p>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
-</div>
