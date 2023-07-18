@@ -25,6 +25,7 @@ class staff_members_serializer(serializers.ModelSerializer):
             'name',
             'lab',
             'email_id',
+            'image'
         )
 
 class research_area_serializer(serializers.ModelSerializer):
