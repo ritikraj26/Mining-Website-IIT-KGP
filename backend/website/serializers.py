@@ -1,67 +1,64 @@
 from rest_framework import serializers
-from .models import research_topics, faculty_members, awards_and_recognitions, publications, staff_members, timetables
+from .models import *
 
 
-class research_topics_serializer(serializers.ModelSerializer):
-    class Meta:
-        model = research_topics
-        fields = (
-            'topic',
-            'description',
-        )
 
 
 class faculty_members_serializer(serializers.ModelSerializer):
     class Meta:
-        model = faculty_members
+        model = faculty_member
         fields = (
-            'first_name',
-            'last_name',
+            'name',
+            'phd_college',
+            'research_area',
+            'institute_webpage',
+            'personal_website',
             'email_id',
-            'research_interest',
-            'image',
-        )
-
-
-class awards_and_recognitions_serializer(serializers.ModelSerializer):
-    class Meta:
-        model = awards_and_recognitions
-        fields =(
-            'faculty',
-            'description'
-        )
-
-
-class publications_serializer(serializers.ModelSerializer):
-    class Meta:
-        model = publications
-        fields = (
-            'title',
-            'description',
             'image'
         )
 
 
 class staff_members_serializer(serializers.ModelSerializer):
     class Meta:
-        model = staff_members
+        model = staff_member
         fields = (
-            'first_name',
-            'last_name',
-            'post',
+            'name',
+            'lab',
             'email_id',
         )
 
-
-class timetables_serializer(serializers.ModelSerializer):
+class research_area_serializer(serializers.ModelSerializer):
     class Meta:
-        model = timetables
+        model = research_area
         fields = (
-            'semester',
-            'year',
-            'summary',
-            'faculty_wise_teaching_slot',
-            'faculty_wise_timetable',
-            'teaching_assistant_loading',
-            'specialization_wise_allocation',
+            'topic',
+            'description'
+        )
+
+
+class education_serializer(serializers.ModelSerializer):
+    class Meta:
+        model = education
+        fields = (
+            'name',
+            'description'
+        )
+
+
+class society_serializer(serializers.ModelSerializer):
+    class Meta:
+        model = society
+        fields = (
+            'name',
+            'description'
+        )
+
+class event_serializer(serializers.ModelSerializer):
+    class Meta:
+        model = event
+        fields = (
+            'name',
+            'link',
+            'concluded',
+            'dated_at'
         )

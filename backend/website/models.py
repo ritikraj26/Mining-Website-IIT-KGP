@@ -1,40 +1,62 @@
 from django.db import models
 
-class research_topics(models.Model):
+class research_area(models.Model):
     topic=models.CharField(max_length=100)
-    descriprion=models.CharField(max_length=500)
-
-
-class faculty_members(models.Model):
-    first_name=models.CharField(max_length=50)
-    last_name=models.CharField(max_length=50)
-    email_id=models.EmailField(max_length=50)
-    research_interest=models.ForeignKey(research_topics,on_delete=models.CASCADE)
-    image=models.ImageField(upload_to='media/images/faculty')
-
-
-class awards_and_recognitions(models.Model):
-    faculty=models.ForeignKey(faculty_members,on_delete=models.CASCADE)
     description=models.CharField(max_length=500)
+
+
+class faculty_member(models.Model):
+    name = models.CharField(max_length=100)
+    phd_college = models.CharField(max_length=100)
+    research_area = models.TextField(blank=True) 
+    institute_webpage = models.CharField(max_length=100,blank=True)
+    personal_website = models.CharField(max_length=100,blank=True)
+    email_id=models.EmailField(max_length=100)
+    image=models.ImageField(upload_to="faculty_members", blank=True)
+
+
+class staff_member(models.Model):
+    name=models.CharField(max_length=100)
+    lab=models.CharField(max_length=100)
+    email_id=models.EmailField(max_length=100,blank=True)
+    image=models.ImageField(upload_to="staff_members", blank=True)
+
+
+class research_scholar(models.Model):
+    name=models.CharField(max_length=100)
+    research_area=models.CharField(max_length=100)
+    supervisor=models.CharField(max_length=100)
+    personal_website = models.CharField(max_length=100,blank=True)
+    email_id=models.EmailField(max_length=100,blank=True)
+    image=models.ImageField(upload_to="research_scholars", blank=True)
+
+
+
+class event(models.Model):
+    name = models.CharField(max_length=100)
+    link = models.CharField(max_length=100, blank=True,null=True)
+    concluded = models.BooleanField(default=False)
+    dated_at = models.DateField(blank=True,null=True)
+
+
+class lab(models.Model):
+    name = models.CharField(max_length=50)
+    description = models.TextField(max_length=100,blank=True)
     
 
-class publications(models.Model):
-    title=models.CharField(max_length=100)
-    description=models.CharField(max_length=500)
-    image=models.ImageField(upload_to='media/images/publications')
+
+class gallery(models.Model):
+    image = models.ImageField(upload_to="gallery")
 
 
-class staff_members(models.Model):
-    first_name=models.CharField(max_length=50)
-    last_name=models.CharField(max_length=50)
-    post=models.CharField(max_length=100)
-    email_id=models.EmailField(max_length=50)
 
-class timetables(models.Model):
-    semester=models.CharField(max_length=10) #Autumn or Spring
-    year=models.CharField(max_length=4)
-    summary=models.FileField(upload_to='media/files/timetable')
-    faculty_wise_teaching_slot=models.FileField(upload_to='media/files/timetable')
-    faculty_wise_timetable=models.FileField(upload_to='media/files/timetable')
-    teaching_assistant_loading=models.FileField(upload_to='media/files/timetable')
-    specialization_wise_allocation=models.FileField(upload_to='media/files/timetable')
+class education(models.Model):
+    name = models.CharField(max_length=100)
+    description = models.CharField(max_length=100,blank=True)
+
+
+class society(models.Model):
+    name = models.CharField(max_length=100)
+    description = models.CharField(max_length=100,blank=True)
+    link = models.CharField(max_length=100,blank=True) 
+

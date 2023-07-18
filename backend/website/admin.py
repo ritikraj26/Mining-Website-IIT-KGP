@@ -1,10 +1,11 @@
 from django.contrib import admin
 
-from .models import research_topics, faculty_members, awards_and_recognitions, publications, staff_members, timetables
+from .models import *
 
-admin.site.register(research_topics)
-admin.site.register(faculty_members)
-admin.site.register(awards_and_recognitions)
-admin.site.register(publications)
-admin.site.register(staff_members)
-admin.site.register(timetables)
+admin.site.register(faculty_member)
+admin.site.register(staff_member)
+admin.site.register(research_area)
+admin.site.register(education)
+admin.site.register(society)
+admin.site.register(event)
+
