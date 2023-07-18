@@ -4,8 +4,8 @@
             <img style="width: 136px" src="https://upload.wikimedia.org/wikipedia/en/thumb/1/1c/IIT_Kharagpur_Logo.svg/1200px-IIT_Kharagpur_Logo.svg.png" alt="IIT-KGP Logo">
         </div>
         <div style="background-color: #db5903; display: flex; flex: 1; flex-direction: column; padding: 5px 20px; height: 150px; justify-content: center;">
-            <h4 style="font-family: 'Times New Roman', Times, serif; font-weight: 700; letter-spacing: 4px; font-size: 40px; color: white;">Indian Institute of Technology(IIT) Kharagpur</h4>
-            <h2 style="font-family: 'Times New Roman', Times, serif; font-weight: 700; letter-spacing: 8px; font-size: 30px; color: white;">Department of Mining Engineering</h2>
+            <h4 style="font-family: 'Times New Roman', Times, serif; font-weight: 700; letter-spacing: 2px; font-size: 40px; color: white;">Department of Mining Engineering</h4>
+            <h4 style="font-family: 'Times New Roman', Times, serif; font-weight: 700; letter-spacing: 2px; font-size: 40px; color: white;">Indian Institute of Technology(IIT) Kharagpur</h4>
         </div>
     </div>
     <div style="display: flex; flex-direction: row; justify-content: space-around; padding: 10px 0;">
@@ -21,9 +21,60 @@
       <a routerLink="/contact" style="text-decoration: none;">Contact</a>
     </div>
 </div>
-<div style="display: flex; justify-content: center; width: 100%; ">
+
+
+<!-- <div style="display: flex; justify-content: center; width: 100%; ">
   <img style="width: 100%;" src="../../../assets/mining_wide.png" alt="Department of Mining Engineering">
-</div>
+</div> -->
+
+
+
+<mdb-carousel [controls]="true" [indicators]="true" [animation]="'fade'">
+  <mdb-carousel-item>
+    <img
+      src="../../../assets/dep1.jpg"
+      class="d-block w-100"
+      alt="..."
+    />
+    <div class="carousel-caption d-none d-md-block">
+      <h5>First slide label</h5>
+      <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+    </div>
+  </mdb-carousel-item>
+  <mdb-carousel-item>
+    <img
+      src="../../../assets/dep2.jpg"
+      class="d-block w-100"
+      alt="..."
+    />
+    <div class="carousel-caption d-none d-md-block">
+      <h5>Second slide label</h5>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+    </div>
+  </mdb-carousel-item>
+  <mdb-carousel-item>
+    <img
+      src="../../../assets/dep3.jpg"
+      class="d-block w-100"
+      alt="..."
+    />
+    <div class="carousel-caption d-none d-md-block">
+      <h5>Third slide label</h5>
+      <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+    </div>
+  </mdb-carousel-item>
+  <mdb-carousel-item>
+    <img
+      src="../../../assets/dep4.jpg"
+      class="d-block w-100"
+      alt="..."
+    />
+    <div class="carousel-caption d-none d-md-block">
+      <h5>Fourth slide label</h5>
+      <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+    </div>
+  </mdb-carousel-item>
+</mdb-carousel>
 
 <!-- 
 <div class="row align-items-center text-center">
