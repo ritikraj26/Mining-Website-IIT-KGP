@@ -1,0 +1,31 @@
+.card:not(:empty):hover,
+.card:not(:empty):focus {
+	z-index: 1;
+	color: black;
+	background: rgba(219,89,35,0.2);
+	opacity: 1;
+	transform: scale(1) rotateZ(20deg);
+	cursor: pointer;
+	
+	&:after {
+		opacity: 1;
+	}
+	
+	&:before {
+		opacity: 0;
+	}
+}
+
+.about {
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    height: 180px;
+    background-color: rgba(219,89,35,0.2);
+    margin: 20px;
+    border-radius: 10px;
+    text-align: center;
+    justify-content: center;
+    box-shadow: 1px 1px 5px #888888;
+}
+
