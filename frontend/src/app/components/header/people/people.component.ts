@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { DomSanitizer, SafeUrl } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-people',
@@ -8,7 +9,7 @@ import { HttpClient } from '@angular/common/http';
 })
 
 export class PeopleComponent {
-  constructor(private http:HttpClient) {}
+  constructor(private http:HttpClient,private sanitizer: DomSanitizer) {}
 
   faculty:any;
   staff:any;
