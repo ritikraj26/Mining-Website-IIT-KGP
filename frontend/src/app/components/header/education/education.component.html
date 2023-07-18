@@ -1,0 +1,12 @@
+<body>
+	<h1>Education</h1>
+	<ol class="olcards">
+		<li *ngFor="let title of education"style="--cardColor:#fc374e">
+			<div class="content">
+				<div class="icon">😀</div>
+				<div class="title">{{title.name}}</div>
+				<div class="text">{{title.description}}</div>
+			</div>
+		</li>
+	</ol>
+</body>

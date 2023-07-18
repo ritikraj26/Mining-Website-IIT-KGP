@@ -1,40 +1,122 @@
 from django.db import models
 
-class research_topics(models.Model):
+class research_area(models.Model):
     topic=models.CharField(max_length=100)
-    descriprion=models.CharField(max_length=500)
-
-
-class faculty_members(models.Model):
-    first_name=models.CharField(max_length=50)
-    last_name=models.CharField(max_length=50)
-    email_id=models.EmailField(max_length=50)
-    research_interest=models.ForeignKey(research_topics,on_delete=models.CASCADE)
-    image=models.ImageField(upload_to='media/images/faculty')
-
-
-class awards_and_recognitions(models.Model):
-    faculty=models.ForeignKey(faculty_members,on_delete=models.CASCADE)
     description=models.CharField(max_length=500)
+
+    class Meta:
+        verbose_name = 'Research Area'
+        verbose_name_plural = 'Research Areas'
+    
+    def __str__(self):
+        return self.topic
+
+
+class faculty_member(models.Model):
+    name = models.CharField(max_length=100)
+    phd_college = models.CharField(max_length=100)
+    research_area = models.TextField(blank=True) 
+    institute_webpage = models.CharField(max_length=100,blank=True)
+    personal_website = models.CharField(max_length=100,blank=True)
+    email_id=models.EmailField(max_length=100)
+    image=models.ImageField(upload_to="faculty_members", blank=True)
+
+    class Meta:
+        verbose_name = 'Faculty Member'
+        verbose_name_plural = 'Faculty Members'
+    
+    def __str__(self):
+        return self.name
+
+    
+class staff_member(models.Model):
+    name=models.CharField(max_length=100)
+    lab=models.CharField(max_length=100)
+    email_id=models.EmailField(max_length=100,blank=True)
+    image=models.ImageField(upload_to="staff_members", blank=True)
+
+    class Meta:
+        verbose_name = 'Staff Member'
+        verbose_name_plural = 'Staff Members'
+    
+    def __str__(self):
+        return self.name
+
+  
+class research_scholar(models.Model):
+    name=models.CharField(max_length=100)
+    research_area=models.CharField(max_length=100)
+    supervisor=models.CharField(max_length=100)
+    personal_website = models.CharField(max_length=100,blank=True)
+    email_id=models.EmailField(max_length=100,blank=True)
+    image=models.ImageField(upload_to="research_scholars", blank=True)
+
+    class Meta:
+        verbose_name = 'Research Scholar'
+        verbose_name_plural = 'Research Scholars'
+    
+    def __str__(self):
+        return self.name
+
+
+class event(models.Model):
+    name = models.CharField(max_length=100)
+    link = models.CharField(max_length=100, blank=True,null=True)
+    concluded = models.BooleanField(default=False)
+    dated_at = models.DateField(blank=True,null=True)
+
+    class Meta:
+        verbose_name = 'Event'
+        verbose_name_plural = 'Events'
+    
+    def __str__(self):
+        return self.name
+
+
+class lab(models.Model):
+    name = models.CharField(max_length=50)
+    description = models.TextField(max_length=100,blank=True)
+
+    class Meta:
+        verbose_name = 'Laboratory'
+        verbose_name_plural = 'Laboratories'
+    
+    def __str__(self):
+        return self.name
     
 
-class publications(models.Model):
-    title=models.CharField(max_length=100)
-    description=models.CharField(max_length=500)
-    image=models.ImageField(upload_to='media/images/publications')
+class gallery(models.Model):
+    image = models.ImageField(upload_to="gallery")
+
+    class Meta:
+        verbose_name = 'Image'
+        verbose_name_plural = 'Images'
+    
+    def __str__(self):
+        return self.name
 
 
-class staff_members(models.Model):
-    first_name=models.CharField(max_length=50)
-    last_name=models.CharField(max_length=50)
-    post=models.CharField(max_length=100)
-    email_id=models.EmailField(max_length=50)
+class education(models.Model):
+    name = models.CharField(max_length=100)
+    description = models.CharField(max_length=100,blank=True)
 
-class timetables(models.Model):
-    semester=models.CharField(max_length=10) #Autumn or Spring
-    year=models.CharField(max_length=4)
-    summary=models.FileField(upload_to='media/files/timetable')
-    faculty_wise_teaching_slot=models.FileField(upload_to='media/files/timetable')
-    faculty_wise_timetable=models.FileField(upload_to='media/files/timetable')
-    teaching_assistant_loading=models.FileField(upload_to='media/files/timetable')
-    specialization_wise_allocation=models.FileField(upload_to='media/files/timetable')
+    class Meta:
+        verbose_name = 'Education'
+        verbose_name_plural = 'Education'
+    
+    def __str__(self):
+        return self.name
+
+
+class society(models.Model):
+    name = models.CharField(max_length=100)
+    description = models.CharField(max_length=100,blank=True)
+    link = models.CharField(max_length=100,blank=True)
+
+    class Meta:
+        verbose_name = 'Society'
+        verbose_name_plural = 'Societies'
+    
+    def __str__(self):
+        return self.name
+
