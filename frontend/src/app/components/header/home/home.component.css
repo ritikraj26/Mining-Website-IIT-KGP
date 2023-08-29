@@ -7,6 +7,7 @@
 	/* transform: scale(1) rotateZ(10deg); */
 	/* transform: scale(1.1); */
 	cursor: pointer;
+	transition: all 0.5s;
 	
 	&:after {
 		opacity: 1;
