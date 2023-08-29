@@ -33,7 +33,7 @@
 
 .about {
 	/* border: solid 1px; */
-	width: 45%;
+	width: 30%;
 	margin: 30px 20px;
 	text-align: center;
 	justify-content: center;
@@ -46,7 +46,7 @@
 	.about {
 		display: flex;
 		flex-direction: column;
-		width: 100%;
+		width: 60%;
 		padding: 10px 20px;
 		/* height: 180px; */
 		background-color: rgba(219,89,35,0.2);
