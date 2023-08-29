@@ -2,9 +2,10 @@
 .about:not(:empty):focus {
 	z-index: 1;
 	color: black;
-	background: rgba(219,89,35,0.2);
+	background: rgba(137,194,244,0.2);
 	opacity: 1;
-	transform: scale(1) rotateZ(10deg);
+	/* transform: scale(1) rotateZ(10deg); */
+	/* transform: scale(1.1); */
 	cursor: pointer;
 	
 	&:after {
