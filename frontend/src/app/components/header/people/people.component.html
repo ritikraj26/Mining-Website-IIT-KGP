@@ -1,36 +1,22 @@
-
-    <div style="">
-        <div style="display: flex; flex-direction: column; padding: 20px; margin: 20px">
-            <h2>Faculty</h2>
-            <div style="display: flex; flex-direction: row; flex-wrap: wrap;">
-                <div *ngFor="let person of faculty"style="border: solid 1px; width: 20%; display: flex; flex-direction: column; border-radius: 50px; margin: 20px 20px;">
-                    <div style="background-color: #db5903; text-align: center; border-radius: 50px 50px  0 0;">
-                        <img style="border-radius: 50%; height: 100px; width: 100px; margin: 50px auto -50px auto; border: solid 3px white;" src="http://localhost:8000{{person.image}}" alt="">
-                    </div>
-                    <div style="text-align: center; padding: 15% 0; display: flex; flex-direction: column;">
-                        <p><b>{{person.name}}</b></p>
-                        <p>PhD From : {{person.phd_college}}</p>
-                        <p>Area of Research:{{person.research_area}} </p>
-                        <p>Email: {{person.email}}</p>
-                        <a href="#" style="text-decoration: none;">Institute Webpage</a>
-                        <a href="{{person.personal_website}}" style="text-decoration: none;">Personal Website</a>
-                    </div>
-                </div>
+<div style="display: flex; flex-direction: column; padding: 20px; margin: 20px">
+    <div style="display: flex; flex-direction: row; flex-wrap: wrap;">
+        <div *ngFor="let person of faculty" style=" width: 20%; display: flex; flex-direction: column; border-radius: 50px; margin: 20px 20px;">
+            <div class="our-team">
+                <div class="picture">
+                <img class="img-fluid" src="http://localhost:8000{{person.image}}">
             </div>
-        </div>
-        <div style="display: flex; flex-direction: column; padding: 20px; margin: 20px;">
-            <h3>Staff</h3>
-            <div style="display: flex; flex-direction: row; flex-wrap: wrap;">
-                <div *ngFor="let person of staff"style="border: solid 1px; width: 20%; display: flex; flex-direction: column; border-radius: 50px; margin: 20px 20px;">
-                    <div style="background-color: #db5903; text-align: center; border-radius: 50px 50px  0 0;">
-                        <img style="border-radius: 50%; height: 100px; width: 100px; margin: 50px auto -50px auto; border: solid 3px white;" src="http://localhost:8000{{person.image}}" alt="">
-                    </div>
-                    <div style="text-align: center; padding: 15% 0; display: flex; flex-direction: column;">
-                        <p><b>{{person.name}}</b></p>
-                        <p>Laboratory: {{person.lab}}</p>
-                        <p>Email: {{person.email_id}}</p>
-                    </div>
-                </div>
+            <div class="team-content">
+                <h3 class="name">{{person.name}}</h3>
+                <h4 class="title">PHD College: {{person.phd_college}}</h4>
+                <h4 class="title">Email: {{person.email_id}}</h4>
+                <h4 class="title"><a style="text-decoration: none;" href="{{person.institute_webpage}}">Institute webpage</a></h4>
+                <h4 class="title"><a style="text-decoration: none;" href="{{person.personal_website}}">Institute webpage</a></h4>
+
+            </div>
+            <ul class="social">
+                <li><a href="#" aria-hidden="true"></a></li>
+            </ul>
             </div>
         </div>
     </div>
+</div>

@@ -1,32 +1,33 @@
 <body>
 	<div style="display: flex; flex-direction: row;">
-		<div style="width: 50%; text-align: center;">
+		<div style="display: flex; flex: 1;">
 			<h1>Past Events</h1>
-		<ol class="olcards">
-			<div *ngFor="let event of events">
-				<li *ngIf="event.concluded" style="--cardColor:#fc374e">
-					<div  class="content">
-						<div class="icon">😀</div>
-						<div class="title">{{event.name}}</div>
-						<div class="text"> Description</div>
-					</div>
-				</li>
-			</div>
-		</ol>
+			<ol class="olcards">
+				<div *ngFor="let event of events">
+					<li *ngIf="event.concluded" style="--cardColor:#fc374e">
+						<div class="content">
+							<div class="icon">😀</div>
+							<div class="title">{{event.name}}</div>
+							<div class="text"> Description</div>
+						</div>
+					</li>
+				</div>
+			</ol>
+		</div>
+		<div style="display: flex; flex: 1;">
+			<h1>Upcoming Events</h1>
+			<ol class="olcards">
+				<div *ngFor="let event of events">
+					<li *ngIf="!event.concluded" style="--cardColor:#fc374e">
+						<div class="content">
+							<div class="icon">😀</div>
+							<div class="title">{{event.name}}</div>
+							<div class="text"> Description</div>
+						</div>
+					</li>
+				</div>
+			</ol>
+
+		</div>
 	</div>
-	<div style="width: 50%; text-align: center;">
-		<h1>Upcoming Events</h1>
-		<ol class="olcards">
-			<div *ngFor="let event of events">
-				<li *ngIf="!event.concluded" style="--cardColor:#fc374e">
-					<div  class="content">
-						<div class="icon">😀</div>
-						<div class="title">{{event.name}}</div>
-						<div class="text"> Description</div>
-					</div>
-				</li>
-			</div>
-		</ol>
-	</div>
-</div>
 </body>
