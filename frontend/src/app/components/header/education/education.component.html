@@ -1,6 +1,9 @@
 <body>
-	<h1>Education</h1>
-	<ol class="olcards">
+	<div style="display: flex; padding-top: 10px; text-align: center; justify-content: center;">
+		<h1 style="font-size: 50px; font-family: cursive;">Education</h1>
+		<hr style="width: 5px;">
+	</div>
+	<!-- <ol class="olcards">
 		<li *ngFor="let title of education"style="--cardColor:#fc374e">
 			<div class="content">
 				<div class="icon">😀</div>
@@ -8,5 +11,30 @@
 				<div class="text">{{title.description}}</div>
 			</div>
 		</li>
+	</ol> -->
+	<ol style="--length: 5" role="list">
+		<!-- <li *ngFor="let title of education" style="--i: 1"> -->
+		<div style="display: flex; flex-wrap: wrap;">
+			<li *ngFor="let title of education" style="--i: 1">
+				<h3>{{title.name}}</h3>
+				<p>{{title.description}}</p>
+			</li>
+		</div>
+		<!-- <li style="--i: 2">
+			<h3>Information gathering and analysis</h3>
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Adipiscing diam donec adipiscing tristique risus.</p>
+		</li>
+		<li style="--i: 3">
+			<h3>Creating your claim</h3>
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Adipiscing diam donec adipiscing tristique risus.</p>
+		</li>
+		<li style="--i: 4">
+			<h3>Approvals and submission</h3>
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Adipiscing diam donec adipiscing tristique risus.</p>
+		</li>
+		<li style="--i: 5">
+			<h3>Receiving your benefit</h3>
+			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Adipiscing diam donec adipiscing tristique risus.</p>
+		</li> -->
 	</ol>
 </body>

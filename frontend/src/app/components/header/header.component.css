@@ -2,13 +2,15 @@
     display: flex;
     flex-direction: row;
     align-items: center;
+    flex: 1;
 }
 .top-heading {
     background-color: #db5903;
     display: flex;
-    flex: 1;
+    flex: 19;
     flex-direction: column;
     padding: 5px 20px;
+    padding-top: 0;
     height: 150px;
     justify-content: center;
 }
