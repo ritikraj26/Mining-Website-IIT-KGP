@@ -47,9 +47,9 @@ class staff_member(models.Model):
 class research_scholar(models.Model):
     name=models.CharField(max_length=100)
     research_area=models.CharField(max_length=100)
-    supervisor=models.CharField(max_length=100)
-    personal_website = models.CharField(max_length=100,blank=True)
-    email_id=models.EmailField(max_length=100,blank=True)
+    # supervisor=models.CharField(max_length=100)
+    # personal_website = models.CharField(max_length=100,blank=True)
+    # email_id=models.EmailField(max_length=100,blank=True)
     image=models.ImageField(upload_to="research_scholars", blank=True)
 
     class Meta:

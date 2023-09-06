@@ -21,6 +21,13 @@ def staff_members_api(request):
         serialized_list = staff_members_serializer(list, many=True)
         return JsonResponse(serialized_list.data, safe=False) 
     
+@csrf_exempt
+def research_scholars_api(request):
+    if request.method == 'GET':
+        list = research_scholar.objects.all()
+        serialized_list = research_scholars_serializer(list, many=True)
+        return JsonResponse(serialized_list.data, safe=False) 
+    
 
 @csrf_exempt
 def research_area_api(request):

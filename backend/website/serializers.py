@@ -18,6 +18,16 @@ class faculty_members_serializer(serializers.ModelSerializer):
         )
 
 
+class research_scholars_serializer(serializers.ModelSerializer):
+    class Meta:
+        model = research_scholar
+        fields = (
+            'name',
+            'research_area',
+            'image'
+        )
+
+
 class staff_members_serializer(serializers.ModelSerializer):
     class Meta:
         model = staff_member

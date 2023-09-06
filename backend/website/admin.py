@@ -8,4 +8,4 @@ admin.site.register(research_area)
 admin.site.register(education)
 admin.site.register(society)
 admin.site.register(event)
-
+admin.site.register(research_scholar)
