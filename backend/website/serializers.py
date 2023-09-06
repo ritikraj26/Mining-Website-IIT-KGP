@@ -23,8 +23,9 @@ class staff_members_serializer(serializers.ModelSerializer):
         model = staff_member
         fields = (
             'name',
+            'post',
+            'contact',
             'lab',
-            'email_id',
             'image'
         )
 

@@ -1,13 +1,33 @@
-
 <body>
 	<h1>Societies</h1>
-	<ol class="olcards">
-		<li *ngFor="let title of society"style="--cardColor:#fc374e">
-			<div class="content">
-				<div class="icon">😀</div>
-				<div class="title">{{title.name}}</div>
-				<div class="text">{{title.description}}</div>
+	<ul class="olcards">
+		<div *ngFor="let title of society">
+			<div>
+				<li style="--cardColor:#fc374e">
+					<div class="content">
+						<!-- <div class="icon">😀</div> -->
+						<div class="title">{{title.name}}</div>
+						<div class="text">{{title.description}}</div>
+					</div>
+				</li>
 			</div>
-		</li>
-	</ol>
+			<div>
+				<div class="container">
+					<h1>Contact Us</h1>
+					<div class="contact-info">
+						<h2>Office</h2>
+						<p><strong>Email:</strong> office@mining.iitkgp.ac.in</p>
+						<p><strong>Phone:</strong> +91 03222 282281</p>
+						<p><strong>Address:</strong> Department of Mining Engineering, IIT Kharagpur</p>
+					</div>
+					<div class="contact-info">
+						<h2>HOD</h2>
+						<p><strong>Name:</strong> Biswajit Samanta</p>
+						<p><strong>Email:</strong> hod_mining@iitkgp.ac.in </p>
+						<p><strong>Phone:</strong> +91 03222 282282</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</ul>
 </body>
