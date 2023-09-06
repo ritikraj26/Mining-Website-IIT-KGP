@@ -31,8 +31,9 @@ class faculty_member(models.Model):
     
 class staff_member(models.Model):
     name=models.CharField(max_length=100)
-    lab=models.CharField(max_length=100)
-    email_id=models.EmailField(max_length=100,blank=True)
+    post=models.CharField(max_length=100, null=True, blank=True)
+    contact=models.CharField(max_length=100,blank=True)
+    lab=models.CharField(max_length=100, blank=True)
     image=models.ImageField(upload_to="staff_members", blank=True)
 
     class Meta:
