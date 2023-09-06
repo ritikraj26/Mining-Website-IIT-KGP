@@ -1,13 +1,35 @@
 
 <body>
-	<h1>Societies</h1>
+	<h1 style="font-family: cursive; font-weight: 700; font-size: 50px; padding-bottom: 30px;">Societies</h1>
 	<ol class="olcards">
-		<li *ngFor="let title of society"style="--cardColor:#fc374e">
-			<div class="content">
-				<div class="icon">😀</div>
+		<div *ngFor="let title of society">
+		<div>
+			<li style="--cardColor:#fc374e">
+				<div class="content">
+					<!-- <div class="icon">😀</div> -->
 				<div class="title">{{title.name}}</div>
 				<div class="text">{{title.description}}</div>
+				<!--Hello-->
+				</div>
+			</li>
+		<div style="margin: 20px 55px;">
+			<div class="container">
+				<h1>About the Society</h1>
+				<div class="contact-info">
+					<h2>Information:</h2>
+					<p><strong>President:</strong> Mr. Rakesh Kumar</p>
+					<p><strong>Vice-President:</strong> Sachin Bansal</p>
+					<p><strong>Treasurer:</strong> Amit Kumar</p>
+				</div>
+				<!-- <div class="contact-info">
+					<h2>HOD</h2>
+					<p><strong>Name:</strong>Biswajit Samanta</p>
+					<p><strong>Email:</strong> csamantab@mining.iitkgp.ac.in </p>
+					<p><strong>Phone:</strong> +1 (123) 456-7890</p>
+				</div> -->
 			</div>
-		</li>
+		</div>
+	</div>
+	</div>
 	</ol>
 </body>

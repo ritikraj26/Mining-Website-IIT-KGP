@@ -1,3 +1,4 @@
+/* Ok Hello */
 :root {
     --cardColor : #61E697;
     --pure : #FFFFFF;
@@ -109,3 +110,26 @@ body {
     grid-area: text;
   }
   
+
+
+
+  /*New component*/
+
+  .wrapper {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+.container {
+    max-width: 800px;
+    margin: auto;
+    padding: 25px;
+}
+.contact-info {
+
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}

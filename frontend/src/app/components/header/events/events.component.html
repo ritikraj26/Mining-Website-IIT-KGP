@@ -4,13 +4,25 @@
 			<h1>Past Events</h1>
 			<ol class="olcards">
 				<div *ngFor="let event of events">
-					<li *ngIf="event.concluded" style="--cardColor:#fc374e">
-						<div class="content">
-							<div class="icon">😀</div>
+					<div>
+						<li style="--cardColor:#fc374e">
+							<div class="content">
+								<!-- <div class="icon">😀</div> -->
 							<div class="title">{{event.name}}</div>
-							<div class="text"> Description</div>
+							<div class="text">{{event.description}}</div>
+							<!--Hello-->
+							</div>
+						</li>
+					<div style="margin: 20px 55px;">
+						<div class="container">
+							<h1>About the Degree</h1>
+							<div class="contact-info">
+								<h2>Description:</h2>
+								<p><strong>President:</strong> This is a very good education</p>
+							</div>
 						</div>
-					</li>
+					</div>
+				</div>
 				</div>
 			</ol>
 		</div>
@@ -18,13 +30,25 @@
 			<h1>Upcoming Events</h1>
 			<ol class="olcards">
 				<div *ngFor="let event of events">
-					<li *ngIf="!event.concluded" style="--cardColor:#fc374e">
-						<div class="content">
-							<div class="icon">😀</div>
+					<div>
+						<li style="--cardColor:#fc374e">
+							<div class="content">
+								<!-- <div class="icon">😀</div> -->
 							<div class="title">{{event.name}}</div>
-							<div class="text"> Description</div>
+							<div class="text">{{event.description}}</div>
+							<!--Hello-->
+							</div>
+						</li>
+					<div style="margin: 20px 55px;">
+						<div class="container">
+							<h1>About the Degree</h1>
+							<div class="contact-info">
+								<h2>Description:</h2>
+								<p><strong>President:</strong> This is a very good education</p>
+							</div>
 						</div>
-					</li>
+					</div>
+				</div>
 				</div>
 			</ol>
 

@@ -1,8 +1,8 @@
-<body>
+<!-- <body>
 	<div style="display: flex; padding-top: 10px; text-align: center; justify-content: center;">
 		<h1 style="font-size: 50px; font-family: cursive;">Education</h1>
 		<hr style="width: 5px;">
-	</div>
+	</div> -->
 	<!-- <ol class="olcards">
 		<li *ngFor="let title of education"style="--cardColor:#fc374e">
 			<div class="content">
@@ -12,29 +12,39 @@
 			</div>
 		</li>
 	</ol> -->
-	<ol style="--length: 5" role="list">
+	<!-- <ol style="--length: 5" role="list"> -->
 		<!-- <li *ngFor="let title of education" style="--i: 1"> -->
-		<div style="display: flex; flex-wrap: wrap;">
+		<!-- <div style="display: flex; flex-wrap: wrap;">
 			<li *ngFor="let title of education" style="--i: 1">
 				<h3>{{title.name}}</h3>
 				<p>{{title.description}}</p>
 			</li>
 		</div>
-		<!-- <li style="--i: 2">
-			<h3>Information gathering and analysis</h3>
-			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Adipiscing diam donec adipiscing tristique risus.</p>
-		</li>
-		<li style="--i: 3">
-			<h3>Creating your claim</h3>
-			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Adipiscing diam donec adipiscing tristique risus.</p>
-		</li>
-		<li style="--i: 4">
-			<h3>Approvals and submission</h3>
-			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Adipiscing diam donec adipiscing tristique risus.</p>
-		</li>
-		<li style="--i: 5">
-			<h3>Receiving your benefit</h3>
-			<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Adipiscing diam donec adipiscing tristique risus.</p>
-		</li> -->
+	</ol>
+</body> -->
+<body>
+	<h1 style="font-family: cursive; font-weight: 700; font-size: 50px; padding-bottom: 30px;">Education</h1>
+	<ol class="olcards">
+		<div *ngFor="let title of education">
+		<div>
+			<li style="--cardColor:#fc374e">
+				<div class="content">
+					<!-- <div class="icon">😀</div> -->
+				<div class="title">{{title.name}}</div>
+				<div class="text">{{title.description}}</div>
+				<!--Hello-->
+				</div>
+			</li>
+		<div style="margin: 20px 55px;">
+			<div class="container">
+				<h1>About the Degree</h1>
+				<div class="contact-info">
+					<h2>Description:</h2>
+					<p><strong>President:</strong> This is a very good education</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	</div>
 	</ol>
 </body>
