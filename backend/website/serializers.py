@@ -2,8 +2,6 @@ from rest_framework import serializers
 from .models import *
 
 
-
-
 class faculty_members_serializer(serializers.ModelSerializer):
     class Meta:
         model = faculty_member
@@ -39,12 +37,25 @@ class staff_members_serializer(serializers.ModelSerializer):
             'image'
         )
 
+
+class research_area_image_serializer(serializers.ModelSerializer):
+    class Meta:
+        model = research_area_image
+        fields = (
+            'image',
+            'description'
+        )
+
+
 class research_area_serializer(serializers.ModelSerializer):
+    images = research_area_image_serializer(many=True, read_only=True)
     class Meta:
         model = research_area
         fields = (
             'topic',
-            'description'
+            'faculties',
+            'broad_research_area',
+            'images'
         )
 
 

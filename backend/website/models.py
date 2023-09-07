@@ -2,7 +2,9 @@ from django.db import models
 
 class research_area(models.Model):
     topic=models.CharField(max_length=100)
-    description=models.CharField(max_length=500)
+    faculties=models.TextField(blank=True)
+    broad_research_area=models.TextField(blank=True)
+    # description=models.CharField(max_length=500)
 
     class Meta:
         verbose_name = 'Research Area'
@@ -11,6 +13,18 @@ class research_area(models.Model):
     def __str__(self):
         return self.topic
 
+
+class research_area_image(models.Model):
+    research_area = models.ForeignKey(research_area,related_name="images",on_delete=models.CASCADE)
+    image = models.ImageField(upload_to="research_area", blank=True)
+    description = models.TextField(max_length=100,blank=True)
+
+    class Meta:
+        verbose_name = 'Reseach Area Image'
+        verbose_name_plural = 'Reseach Area Images'
+    
+    def __str__(self):
+        return self.research_area.topic
 
 class faculty_member(models.Model):
     name = models.CharField(max_length=100)
@@ -69,18 +83,6 @@ class event(models.Model):
     class Meta:
         verbose_name = 'Event'
         verbose_name_plural = 'Events'
-    
-    def __str__(self):
-        return self.name
-
-
-class lab(models.Model):
-    name = models.CharField(max_length=50)
-    description = models.TextField(max_length=100,blank=True)
-
-    class Meta:
-        verbose_name = 'Laboratory'
-        verbose_name_plural = 'Laboratories'
     
     def __str__(self):
         return self.name
