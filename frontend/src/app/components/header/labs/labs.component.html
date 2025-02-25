@@ -1,6 +1,48 @@
 <div>
-  <h1 style="margin: 30px;">Research Areas</h1>
-  <div style="display: flex; flex-direction: column; justify-content: center; align-items: center;">
+  <h1>Research Areas</h1>
+  
+  <div *ngFor="let research_area of research_areas; let i = index" class="dropdown">
+    <div class="dropdown-card" (click)="toggleExpand(i)">
+      <p class="dropdown-title">{{ research_area.topic }}</p>
+      <p class="dropdown-summary">Click to expand and see details</p>
+    </div>
+  
+    <div *ngIf="expandedStates[i]" class="dropdown-content expanded">
+      <div class="content-inner">
+        <!-- <h3>Lab Overview</h3> -->
+        <div class="image-container">
+          <div *ngFor="let images of research_area.images" class="image-item">
+            <img src="http://localhost:8000{{images.image}}" alt="">
+            <p class="image-description">{{images.description}}</p>
+          </div>
+        </div>
+  
+        <div class="info-container">
+          <div class="info-section">
+            <p><b>Faculties:</b></p>
+            <ul>
+              <li *ngFor="let fruit of research_area.faculties.split(',')">{{ fruit }}</li>
+            </ul>
+          </div>
+          <div class="info-section">
+            <p><b>Broad Research Area:</b></p>
+            <ul>
+              <li *ngFor="let fruit of research_area.broad_research_area.split(',')">{{ fruit }}</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+  
+  
+  
+  
+  <!--  -->
+
+  <!-- <div style="display: flex; flex-direction: column; justify-content: center; align-items: center;">
     <div *ngFor="let research_area of research_areas"  style="width: 80%; display: flex; flex-direction: column; justify-content: center; align-items: center;">
       <div style="display: flex; justify-content: flex-start; width: 100%;">
         <h2>{{research_area.topic}}</h2>
@@ -18,7 +60,6 @@
       <div style="display: flex; flex-direction: row; width: 100%;">
         <div style="display: flex; justify-content: flex-start; width: 50%; flex-direction: column; margin-top: 20px;">
           <p><b>Faculties:</b></p>
-          <!-- {{research_area.faculties}} -->
           <ul>
             <li *ngFor="let fruit of research_area.faculties.split(',')">{{ fruit }}</li>
           </ul>
@@ -26,7 +67,6 @@
         </div>
         <div style="display: flex; justify-content: flex-start; width: 50%; flex-direction: column; margin-top: 20px;">
           <p><b>Broad Research Area:</b></p>
-          <!-- {{research_area.broad_research_area}} -->
           <ul>
             <li *ngFor="let fruit of research_area.broad_research_area.split(',')">{{ fruit }}</li>
           </ul>
@@ -34,6 +74,6 @@
       </div>
     </div>
   </div>
-</div>
+</div> -->
 <!-- <div *ngFor="let research_area of research_areas">
 </div> -->
